@@ -1,0 +1,3 @@
+[submodule "zas"]
+	path = zas
+	url = https://github.com/zfsonlinux/zfs-auto-snapshot.git

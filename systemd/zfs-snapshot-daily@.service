@@ -1,0 +1,6 @@
+[Unit]
+Description=Snapshot %I and keep it for 7 days
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/zfs-auto-snapshot --label=daily --prefix='auto' --keep=7 %I

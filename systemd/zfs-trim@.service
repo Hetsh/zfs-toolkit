@@ -1,0 +1,8 @@
+[Unit]
+Description=Trim %I
+
+[Service]
+Nice=19
+IOSchedulingClass=idle
+KillSignal=SIGINT
+ExecStart=/sbin/zpool trim %I

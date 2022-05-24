@@ -1,0 +1,10 @@
+[Unit]
+Description=Monthly %I scrub
+
+[Timer]
+OnCalendar=monthly
+AccuracySec=1h
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,6 @@
+[Unit]
+Description=Snapshot %I and keep it for 24 hours
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/zfs-auto-snapshot --label=hourly --prefix='auto' --keep=24 %I

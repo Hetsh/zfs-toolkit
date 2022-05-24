@@ -1,0 +1,9 @@
+[Unit]
+Description=Weekly %I snapshots
+
+[Timer]
+OnCalendar=weekly
+Persistent=true
+
+[Install]
+WantedBy=timers.target

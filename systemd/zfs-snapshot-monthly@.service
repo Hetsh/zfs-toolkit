@@ -1,0 +1,6 @@
+[Unit]
+Description=Snapshot %I and keep it for 12 months
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/zfs-auto-snapshot --label=monthly --prefix='auto' --keep=12 %I
