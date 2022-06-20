@@ -18,9 +18,9 @@ distribute() {
 	fi
 }
 
-KERNEL=$(pacman -Qq | grep zfs-linux)
+KERNEL=$(pacman -Qq | grep '^linux$\|^linux-lts$')
 distribute "$BOOT_DIR/vmlinuz-$KERNEL"
 distribute "$BOOT_DIR/initramfs-$KERNEL.img"
 
-MICROCODE=$(pacman -Qq | grep ucode)
+MICROCODE=$(pacman -Qq | grep 'ucode$')
 distribute "$BOOT_DIR/$MICROCODE.img"
