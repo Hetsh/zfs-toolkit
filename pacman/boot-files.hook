@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = zfs-linux
+Target = zfs-linux-lts
+
+[Action]
+Description = Move kernel, microcode and initramfs to boot partitions
+When = PostTransaction
+Exec = /bin/sh -c /usr/bin/move-boot-files.sh
